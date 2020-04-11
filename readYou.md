@@ -27,7 +27,7 @@
   
   ## License
   
-  [![MIT License](https://img.shields.io/badge/licence-MIT-blue.svg)] 
+  ![MIT License](https://img.shields.io/badge/licence-MIT-blue.svg)
   
   ## Acknowledgments
   
