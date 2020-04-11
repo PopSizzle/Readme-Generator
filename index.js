@@ -49,11 +49,11 @@ const questions = [
 function init() {
     inquirer
         .prompt(questions)
-        .then(function(data){
+        .then(async function(data){
             console.log(data.username);
-            const queryURL = "https://api.github.com/users/PopSizzle";
+            const queryURL = "https://api.github.com/users/" + data.username;
             
-            axios
+            await axios
             .get(queryURL)
             .then(function(res) {
 
@@ -63,7 +63,7 @@ function init() {
                 console.log(githubEmail);
                 });
 
-            rmFile = generateMarkdown(data);
+            let rmFile = generateMarkdown(data);
             writeToFile("readYou.md", rmFile);
             })
             .catch(function(err) {

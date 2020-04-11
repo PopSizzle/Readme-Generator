@@ -1,7 +1,7 @@
 
-  # 
+  # p
 
-  
+  p
   
   ## Table of Contents
   
@@ -17,11 +17,11 @@
   
   In order to use this Readme Generator you will need to install the following dependencies:
   
-  * 
+  * p
 
   ### Usage
   
-  
+  p
   
   ## License
   
@@ -29,13 +29,14 @@
   
   ## Acknowledgments
   
-  * 
+  * p
   
   ## Tests
 
-  
+  p
   
   ## Questions
   
-  * <img src="https://avatars3.githubusercontent.com/u/60407759?v=4" alt="avatar" style="border-radius: 16px" width="30">
+  * <img src="[object Object]" alt="avatar" style="border-radius: 16px" width="30">
   * https://github.com/PopSizzle
+  * [object Object]
