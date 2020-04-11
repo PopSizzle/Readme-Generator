@@ -59,11 +59,13 @@ function init() {
                 avatarURL = res.data.avatar_url;
                 console.log(avatarURL);
                 githubEmail = res.data.email;
-                console.log(githubEmail);
+                if(githubEmail === null){
+                    githubEmail = "";
+                }
                 });
 
             let rmFile = generateMarkdown(data);
-            writeToFile("readYou.md", rmFile);
+            writeToFile("Readme.md", rmFile);
             })
             .catch(function(err) {
                 console.log(err);
