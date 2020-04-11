@@ -2,8 +2,8 @@ var inquirer = require("inquirer");
 var fs = require("fs");
 var axios = require("axios");
 var generateMarkdown = require("./Develop/utils/generateMarkdown.js");
-let avatarURL;
-let githubEmail;
+var avatarURL= "";
+var githubEmail= "";
 
 let data;
 
@@ -50,17 +50,25 @@ function init() {
     inquirer
         .prompt(questions)
         .then(function(data){
-            console.log(data);
-    
-            githubInfo(data.username);
+            console.log(data.username);
+            const queryURL = "https://api.github.com/users/PopSizzle";
+            
+            axios
+            .get(queryURL)
+            .then(function(res) {
+
+                avatarURL = res.data.avatar_url;
+                console.log(avatarURL);
+                githubEmail = res.data.email;
+                console.log(githubEmail);
+                });
 
             rmFile = generateMarkdown(data);
             writeToFile("readYou.md", rmFile);
+            })
+            .catch(function(err) {
+                console.log(err);
         })
-    
-    .catch(function(err) {
-        console.log(err);
-      });
 }
 
 function writeToFile(fileName, data) {
@@ -70,16 +78,6 @@ function writeToFile(fileName, data) {
         }
     console.log("Success");
     })
-}
-    
-function githubInfo(username){
-    const queryUrl = `https://api.github.com/users/` + username;
-
-        axios.get(queryUrl).then(function(res) {
-
-        avatarURL = res.data.avatar_url;
-        githubEmail = res.data.email;
-        })
 }
 
 init();

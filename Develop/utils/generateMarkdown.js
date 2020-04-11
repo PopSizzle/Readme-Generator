@@ -1,6 +1,3 @@
-var avatarURL = require("../../index.js")
-var githubEmail = require("../../index.js")
-
 function generateMarkdown(data) {
   dependencies = data.necessary.split(",");
   let dependencyList= "";
@@ -52,9 +49,8 @@ function generateMarkdown(data) {
   
   ## Questions
   
-  * <img src="${avatarURL}" alt="avatar" style="border-radius: 16px" width="30">
+  * <img src="https://avatars3.githubusercontent.com/u/60407759?v=4" alt="avatar" style="border-radius: 16px" width="30">
   * https://github.com/${data.username}
-  * ${githubEmail}
 `;
 }
 

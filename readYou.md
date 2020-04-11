@@ -37,6 +37,5 @@
   
   ## Questions
   
-  * <img src="[object Object]" alt="avatar" style="border-radius: 16px" width="30">
+  * <img src="https://avatars3.githubusercontent.com/u/60407759?v=4" alt="avatar" style="border-radius: 16px" width="30">
   * https://github.com/PopSizzle
-  * [object Object]
