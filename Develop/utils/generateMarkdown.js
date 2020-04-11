@@ -22,13 +22,13 @@ function generateMarkdown(data) {
   
   ## Table of Contents
   
-  *Installation
-  *Usage
-  *License
-  *Contributors
-  *Tests
-  *Questions
-  *Contact Info
+  * Installation
+  * Usage
+  * License
+  * Contributors
+  * Tests
+  * Questions
+  * Contact Info
   
   ### Installation
   

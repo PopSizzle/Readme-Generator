@@ -94,45 +94,44 @@ function generateMarkdown(data) {
     }
   
     return `
-    # ${data.title}
+# ${data.title}
   
     ${data.description}
     
-    ## Table of Contents
+## Table of Contents
     
-    *Installation
-    *Usage
-    *License
-    *Contributors
-    *Tests
-    *Questions
-    *Contact Info
+ * Installation
+ * Usage
+ * License
+ * Contributors
+ * Tests
+ * Questions
+ * Contact Info
     
-    ### Installation
+### Installation
     
     In order to use this Readme Generator you will need to install the following dependencies:
     ${dependencyList}
   
-    ### Usage
+### Usage
     
     ${data.usage}
     
-    ## License
+## License
     
     ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
     
-    ## Acknowledgments
+## Acknowledgments
     ${acknowlList}
     
-    ## Tests
-  
+## Tests
     ${data.tests}
     
-    ## Questions
+## Contact the Author for Questions:
     
-    * <img src="${avatarURL}" alt="avatar" style="border-radius: 16px" width="30">
-    * https://github.com/${data.username}
-    * ${githubEmail}
+ * <img src="${avatarURL}" alt="avatar" style="border-radius: 16px" width="30">
+ * https://github.com/${data.username}
+ * ${githubEmail}
   `;
   }
 
