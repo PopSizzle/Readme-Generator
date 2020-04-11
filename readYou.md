@@ -1,7 +1,7 @@
 
-  # Portfolio
+  # P
 
-  I made a portfolio
+  a
   
   ## Table of Contents
   
@@ -17,13 +17,11 @@
   
   In order to use this Readme Generator you will need to install the following dependencies:
   
-  * npm
-  * axios
-  * inquirer
+  * s
 
   ### Usage
   
-  Put portfolio on page
+  d
   
   ## License
   
@@ -31,16 +29,14 @@
   
   ## Acknowledgments
   
-  * Ana
-  * Brad
-  * Jerome
+  * f
   
   ## Tests
 
-  No tests
+  g
   
   ## Questions
   
-  *User Github profile picture
-  *User Github link
-  *User Github email
+  * https://avatars3.githubusercontent.com/u/8609011?v=4
+  * https://github.com/PopSizzle
+  * null

@@ -1,3 +1,5 @@
+var axios=require("./axiosSearch.js");
+
 function generateMarkdown(data) {
   dependencies = data.necessary.split(",");
   let dependencyList= "";
@@ -49,9 +51,9 @@ function generateMarkdown(data) {
   
   ## Questions
   
-  *User Github profile picture
-  *User Github link
-  *User Github email
+  * ${avatarURL}
+  * https://github.com/${data.username}
+  * ${githubEmail}
 `;
 }
 
