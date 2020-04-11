@@ -19,7 +19,13 @@ const questions = [
         type: "input",
         message: "What is the description of your repository?",
         name: "description"
+    },
+    {
+        type: "input",
+        message: "Please enter all dependencies needed to run your project, separated by a comma.",
+        name: "dependencies"
     }
+
 ];
 
 inquirer
