@@ -1,6 +1,9 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
+var axios = require("axios");
 var generateMarkdown = require("./Develop/utils/generateMarkdown.js");
+let avatarURL;
+let githubEmail;
 
 let data;
 
@@ -43,20 +46,22 @@ const questions = [
 
 ];
 
-inquirer
-    .prompt(questions)
-    .then(function(data){
-        console.log(data);
-        var queryURL = "http:" + data.username;
-        console.log(queryURL);
-        rmFile = generateMarkdown(data);
-        writeToFile("readYou.md", rmFile);
-    })
+function init() {
+    inquirer
+        .prompt(questions)
+        .then(function(data){
+            console.log(data);
+    
+            githubInfo(data.username);
+
+            rmFile = generateMarkdown(data);
+            writeToFile("readYou.md", rmFile);
+        })
     
     .catch(function(err) {
         console.log(err);
       });
-    ;
+}
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, function(err){
@@ -67,9 +72,14 @@ function writeToFile(fileName, data) {
     })
 }
     
+function githubInfo(username){
+    const queryUrl = `https://api.github.com/users/` + username;
 
-// function init() {
+        axios.get(queryUrl).then(function(res) {
 
-// }
+        avatarURL = res.data.avatar_url;
+        githubEmail = res.data.email;
+        })
+}
 
-// init();
+init();

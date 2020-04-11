@@ -1,4 +1,5 @@
-var axios=require("./axiosSearch.js");
+var avatarURL = require("../../index.js")
+var githubEmail = require("../../index.js")
 
 function generateMarkdown(data) {
   dependencies = data.necessary.split(",");
@@ -51,7 +52,7 @@ function generateMarkdown(data) {
   
   ## Questions
   
-  * ${avatarURL}
+  * <img src="${avatarURL}" alt="avatar" style="border-radius: 16px" width="30">
   * https://github.com/${data.username}
   * ${githubEmail}
 `;
