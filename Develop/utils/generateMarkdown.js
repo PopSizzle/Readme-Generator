@@ -1,9 +1,19 @@
 function generateMarkdown(data) {
-  necessities = data.dependencies.split(",");
-  
+  dependencies = data.necessary.split(",");
+  let dependencyList= "";
+  acknowl = data.contributors.split(",");
+  let acknowlList= "";
+
+  for(var i=0; i<dependencies.length; i++){
+    dependencyList += "\n  * " + dependencies[i];
+  }
+
+  for(var i=0; i<acknowl.length; i++){
+    acknowlList += "\n  * " + acknowl[i];
+  }
 
   return `
-  #${data.title}
+  # ${data.title}
 
   ${data.description}
   
@@ -20,26 +30,24 @@ function generateMarkdown(data) {
   ### Installation
   
   In order to use this Readme Generator you will need to install the following dependencies:
-  
-  *base npm package
-  *npm axios
-  *npm inquirer
-  
+  ${dependencyList}
+
   ### Usage
   
-  Usage
+  ${data.usage}
   
   ## License
   
-  This project is licensed under the MIT License 
+  [![MIT License](https://img.shields.io/badge/licence-MIT-blue.svg)] 
   
   ## Acknowledgments
-  
-  Acknowledgements
+  ${acknowlList}
   
   ## Tests
+
+  ${data.tests}
   
-  ##Questions
+  ## Questions
   
   *User Github profile picture
   *User Github link

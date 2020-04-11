@@ -1,7 +1,7 @@
 
-  #Portfolio
+  # Portfolio
 
-  I made a portfolio to demonstrate my professional work as a software developer
+  I made a portfolio
   
   ## Table of Contents
   
@@ -17,25 +17,29 @@
   
   In order to use this Readme Generator you will need to install the following dependencies:
   
-  *base npm package
-  *npm axios
-  *npm inquirer
-  
+  * npm
+  * axios
+  * inquirer
+
   ### Usage
   
-  Usage
+  Put portfolio on page
   
   ## License
   
-  This project is licensed under the MIT License 
+  [![MIT License](https://img.shields.io/badge/licence-MIT-blue.svg)] 
   
   ## Acknowledgments
   
-  Acknowledgements
+  * Ana
+  * Brad
+  * Jerome
   
   ## Tests
+
+  No tests
   
-  ##Questions
+  ## Questions
   
   *User Github profile picture
   *User Github link

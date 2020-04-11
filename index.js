@@ -23,7 +23,22 @@ const questions = [
     {
         type: "input",
         message: "Please enter all dependencies needed to run your project, separated by a comma.",
-        name: "dependencies"
+        name: "necessary"
+    },
+    {
+        type: "input",
+        message: "Briefly describe the usage of your project",
+        name: "usage"
+    },
+    {
+        type: "input",
+        message: "Please list all contributors to your project, separated by a comma",
+        name: "contributors"
+    },
+    {
+        type: "input",
+        message: "Briefly explain how to run any tests included in your project",
+        name: "tests"
     }
 
 ];
